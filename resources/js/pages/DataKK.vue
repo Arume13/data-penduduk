@@ -14,9 +14,9 @@ const breadcrumbs: BreadcrumbItem[] = [
 
 // Sample data for the table
 const dataKK = [
-    { noKK: '1234567890', alamat: 'Jl. Merdeka No.1', rt: '01', rw: '02', noRumah: '10', totalAnggota: 5 },
-    { noKK: '0987654321', alamat: 'Jl. Sudirman No.5', rt: '03', rw: '04', noRumah: '20', totalAnggota: 4 },
-    { noKK: '1122334455', alamat: 'Jl. Thamrin No.7', rt: '05', rw: '06', noRumah: '30', totalAnggota: 6 },
+    { noKK: '1234567890', kepalaKeluarga:'Budi', alamat: 'Jl. Merdeka No.1', rt: '01', rw: '02', noRumah: '10', totalAnggota: 5 },
+    { noKK: '0987654321', kepalaKeluarga:'Budi', alamat: 'Jl. Sudirman No.5', rt: '03', rw: '04', noRumah: '20', totalAnggota: 4 },
+    { noKK: '1122334455', kepalaKeluarga:'Budi',alamat: 'Jl. Thamrin No.7', rt: '05', rw: '06', noRumah: '30', totalAnggota: 6 },
 ];
 
 // Mock data penduduk for each KK
@@ -114,6 +114,7 @@ function closeModal() {
                     <thead class="bg-gray-50 text-center dark:bg-gray-700 text-gray-700 dark:text-gray-300">
                         <tr>
                             <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-600">No.KK</th>
+                            <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-600">Kepala Keluarga</th>
                             <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-600">Alamat</th>
                             <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-600">RT</th>
                             <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-600">RW</th>
@@ -125,6 +126,7 @@ function closeModal() {
                     <tbody>
                         <tr v-for="item in dataKK" :key="item.noKK" class="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                             <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">{{ item.noKK }}</td>
+                            <td class="px-6 py-4">{{ item.kepalaKeluarga }}</td>
                             <td class="px-6 py-4">{{ item.alamat }}</td>
                             <td class="px-6 py-4">{{ item.rt }}</td>
                             <td class="px-6 py-4">{{ item.rw }}</td>
