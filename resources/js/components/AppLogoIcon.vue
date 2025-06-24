@@ -13,7 +13,7 @@ defineProps<Props>();
 </script>
 
 <template>
-    <img src="https://kelurahan-pangongangan.madiunkota.go.id/wp-content/uploads/2017/07/LOGO-PKK-PNG.png" class="bg-white  dark:bg-neutral-900"></img>
+    <img src="/pkk.png" class="bg-white  dark:bg-neutral-900"></img>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 42" :class="className" v-bind="$attrs">
         <path
